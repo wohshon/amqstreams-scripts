@@ -1,9 +1,21 @@
 #!/bin/bash
+if [ $# -ne 3  ]
+  then
+    echo "Enter the following parameters:"
+    echo "1. your domain name in the route url - see scripts> $MYDOMAIN"
+    echo "2. source cluster, e.g. cluster1"
+    echo "3. target cluster, e.g. cluster2"
+    exit 1
+fi
+
+rm crd/working/mm2 -rf
 cp crd/mm2-template -rf crd/working/
 mv crd/working/mm2-template crd/working/mm2
 echo "This script only helps to build up the mm2 yaml file"
-C1_NAME=cluster1
-C2_NAME=cluster2
+echo $1
+MYDOMAIN=$1
+C1_NAME=$2
+C2_NAME=$3
 DOMAIN1=apps.ocpcluster1.$MYDOMAIN.com
 DOMAIN2=apps.ocpcluster2.$MYDOMAIN.com
 BOOTSTRAP_URL1=kafka-bootstrap
@@ -20,6 +32,8 @@ C2_ALIAS=$C2_NAME
 
 echo "creating mm2 yaml on c2 for the usecase:"
 echo $C1_NAME " -> " $C2_NAME
+echo $DOMAIN1
+echo $ROUTE1
 sed -i 's/alias: c1/alias: '$C1_ALIAS'/' crd/working/mm2/mm2.yaml 
 sed -i 's/alias: c2/alias: '$C2_ALIAS'/' crd/working/mm2/mm2.yaml 
 sed -i 's/certificate: c1/certificate: '$CERT_NAME'/' crd/working/mm2/mm2.yaml 
