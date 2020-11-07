@@ -1,7 +1,7 @@
 apiVersion: kafka.strimzi.io/v1beta1
 kind: Kafka
 metadata:
-  name: my-cluster-source
+  name: my-cluster
   namespace: amqstreams
 spec:
   kafka:
@@ -32,4 +32,3 @@ spec:
     storage:
       type: ephemeral
     replicas: 3
-

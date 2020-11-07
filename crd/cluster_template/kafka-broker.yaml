@@ -1,8 +1,8 @@
-piVersion: kafka.strimzi.io/v1beta1
+apiVersion: kafka.strimzi.io/v1beta1
 kind: Kafka
 metadata:
-  name: my-cluster-target
-  namespace: amqstreams
+  name: 
+  namespace: 
 spec:
   kafka:
     config:
