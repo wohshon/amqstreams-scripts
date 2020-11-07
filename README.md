@@ -14,7 +14,7 @@ To deploy the cluster, the scripts are as follows:
 
 You can also run the `./deploy.sh` script:
 
-		$ ./deploy.sh amqstreams my-cluster mytopic 
+	$ ./deploy.sh amqstreams my-cluster mytopic 
 
 ```
 #set the namespace name
