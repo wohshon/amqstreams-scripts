@@ -13,4 +13,5 @@ sed -i 's/namespace: .*/namespace: ''/' crd/cluster_template/kafka-topic.yaml
 sed -i 's/topicName: .*/topicName: ''/' crd/cluster_template/kafka-topic.yaml
 sed -i 's/name: .*/name: ''/' crd/cluster_template/kafka-topic.yaml
 
+rm crd/working -rf
 oc delete project $NS
