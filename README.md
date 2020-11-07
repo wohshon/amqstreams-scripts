@@ -72,7 +72,9 @@ oc delete project $NS
 
 - some mm2 templates and sample  in `crd/mm2`
 
-use `create-mm2-yaml.sh` to create a mm2 config. It assumes all secret names and service names are default, and MM2 will be deployed on 'cluster 2'
+use `create-mm2-yaml.sh` to create a mm2 config. It assumes all secret names and service names are default, and MM2 is to  be deployed on 'cluster 2'
+
+the output at `crd/mm2/mm2.yaml` will be ready for manual deployment, so check the appropriate secrets and certs are in place (see following sections)
 
 Some handy commands to ensure you have the secrets setup :
 
