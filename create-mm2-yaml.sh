@@ -14,9 +14,10 @@ cp crd/mm2-template -rf crd/working/
 mv crd/working/mm2-template crd/working/mm2
 echo "This script only helps to build up the mm2 yaml file"
 echo $1
-MYDOMAIN=$1
-C1_NAME=$2
-C2_NAME=$3
+MYDOMAIN1=$1
+MYDOMAIN2=$2
+C1_NAME=$3
+C2_NAME=$4
 DOMAIN1=$MYDOMAIN1
 DOMAIN2=$MYDOMAIN2
 BOOTSTRAP_URL1=kafka-bootstrap
