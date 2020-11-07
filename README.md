@@ -64,7 +64,12 @@ sed -i 's/name: .*/name: ''/' crd/cluster_template/kafka-topic.yaml
 
 rm crd/working -rf
 oc delete project $NS
+
+
 ```
+
+#### Mirror Maker 2 
+
 - some mm2 templates and sample  in `crd/mm2`
 
 use `create-mm2-yaml.sh` to create a mm2 config. It assumes all secret names and service names are default, and MM2 will be deployed on 'cluster 2'
