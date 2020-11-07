@@ -1,8 +1,9 @@
 #!/bin/bash
-if [ $# -ne 3  ]
+if [ $# -ne 4  ]
   then
     echo "Enter the following parameters:"
-    echo "1. your domain name in the route url - see scripts> $MYDOMAIN"
+    echo "1. your source omain name in the route url, apps.ocpcluster1.domain.com - see scripts> $MYDOMAIN"
+    echo "1. your target domain name in the route url, apps.ocpcluster2.domain.com - see scripts> $MYDOMAIN"
     echo "2. source cluster, e.g. cluster1"
     echo "3. target cluster, e.g. cluster2"
     exit 1
@@ -16,8 +17,8 @@ echo $1
 MYDOMAIN=$1
 C1_NAME=$2
 C2_NAME=$3
-DOMAIN1=apps.ocpcluster1.$MYDOMAIN.com
-DOMAIN2=apps.ocpcluster2.$MYDOMAIN.com
+DOMAIN1=$MYDOMAIN1
+DOMAIN2=$MYDOMAIN2
 BOOTSTRAP_URL1=kafka-bootstrap
 BOOTSTRAP_URL2=kafka-bootstrap
 NS1=amqstreams
