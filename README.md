@@ -74,7 +74,9 @@ oc delete project $NS
 
 use `create-mm2-yaml.sh` to create a mm2 config. It assumes all secret names and service names are default, and MM2 is to  be deployed on 'cluster 2'
 
-the output at `crd/mm2/mm2.yaml` will be ready for manual deployment, so check the appropriate secrets and certs are in place (see following sections)
+the output at `crd/mm2/working/mm2.yaml` will be ready for **manual** deployment, so check the appropriate secrets and certs are in place (see following sections)
+
+For bidirectional, you just have to reverse the source and target cluster configs accordingly
 
 Some handy commands to ensure you have the secrets setup :
 
